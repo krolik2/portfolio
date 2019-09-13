@@ -1,6 +1,6 @@
 body,
 html {
-  height: auto;
+  height: 100%;
   margin: 0;
   font-family: "Montserrat";
   box-sizing: border-box;
@@ -66,7 +66,7 @@ hr {
 }
 
 .thumbnail {
-  background: url("../images/avatar.jpg") no-repeat;
+  background: no-repeat;
   background-size: cover;
   width: 100%;
   height: 200px;
@@ -200,11 +200,38 @@ input {
   padding: 0;
 }
 
+.modal-bg {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal-content {
+  width: 900px;
+  height: 600px;
+  background: #fff;
+  border-radius: 0.35em;
+}
+
+.modal-content__img {
+  background: url(../images/4.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 80%;
+  border-radius: 0.35em 0.35em 0 0;
+}
+
+
 @media (min-width: 700px) {
   body {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(2, 1fr);
   }
 
   .avatar {
@@ -214,9 +241,6 @@ input {
   .header {
     padding-top: 12vh;
     padding-right: 4vw;
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-    height: auto;
   }
 
   .container {
@@ -228,7 +252,6 @@ input {
 
   .main {
     padding: 12vh 6vw 12vh 4vw;
-    grid-row: 1 / 3;
   }
 
   .footer {
