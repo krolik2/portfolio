@@ -13,11 +13,13 @@
   </head>
   <body>
     <header class="header" id="header">
-      <div class="container">
+      <div id="fix">
+      <div class="container" id="container">
         <div class="avatar"></div>
         <h1>Welcome to my Portfolio!</h1>
         <p>Feel free to look around</p>
       </div>
+    </div>
     </header>
     <div class="main" id="main">
       <section class="about-me">
@@ -29,29 +31,45 @@
           maxime!
         </p>
         <button class="button">Read more</button>
-        <hr />
       </section>
+      <hr />
       <section class="my-projects">
-        <h2>My projects</h2>
+          <h2>My projects</h2>
+        <div class="my-projects__container">
+          <div class='project-1'>
+            <div class='thumbnail'></div>
         <h3>TODO app</h3>
         <p>
           I have created Todo application using React and Redux with login feature, Firebase backend and authentication.
           Logged in user is able to: create/edit todos, mark tasks as completed and remove completed tasks from the list.
         </p>
+      </div>
+      <div class='project-2'>
+          <div class='thumbnail'></div>
         <h3>Cat4you website and mini game</h3>
         <p>
           This website was part of the front-end course I took at infoShare Academy.
           During which I worked in a team of 4 people and this is the first part of the project.
           There is a hidden game which starts when user provides a valid email address.
         </p>
+      </div>
+      <div class='project-3'>
+          <div class='thumbnail'></div>
         <h3>Cat4you app</h3>
         <p>
           Second part of the project. Our application, in which user can find a cat breed based on his expectations.
           Breeder address, recommended food and toys.
         </p>
+      </div>
+      <div class='project-4'>
+          <div class='thumbnail'></div>
+        <h3>My porfolio website</h3>
+        <p>Created with CSS Grid and flexbox bla bla bla</p>
+      </div>
+      </div>
         <button class="button">Full portfolio</button>
-        <hr />
       </section>
+      <hr />
       <section class="contact-me">
         <h2>Contact me</h2>
         <p>
@@ -65,8 +83,8 @@
             <input class="name" type="text" placeholder="Name"/>
             <input class="email" type="email" placeholder="Email" />
             <textarea class="message" name="Message" id="" placeholder="Message"></textarea>
+            <button class="button" type="submit">Send Message</button>
           </div>
-          <button class="button" type="submit">Send Message</button>
           <ul>
             <li>Śląska 33A/9<br />80-379 Gdańsk</li>
             <li>884-854-347</li>
