@@ -1,7 +1,10 @@
 const footer = document.querySelector('#footer');
 const header = document.querySelector('#header');
 const main = document.querySelector('#main');
-const fix = document.querySelector('#fix')
+const fix = document.querySelector('#fix');
+const modal = document.querySelector('.modal-bg');
+const thumbnail1 = document.querySelector('#thumbnail-1');
+const close = document.querySelector('.modal--close');
 
 
 
@@ -21,12 +24,23 @@ function moveFooter(screenWidth) {
 moveFooter(window.innerWidth);
 
 
-// window.addEventListener('scroll', moveBackground)
+window.addEventListener('scroll', moveBackground);
 
-// function moveBackground() {
-//     let scrollValue = window.pageYOffset;
-//     let rate = scrollValue * (-0.1);
-
+function moveBackground() {
+    let scrollValue = window.pageYOffset;
     
-//     header.style.backgroundPosition = '0px ' + rate + 'px';
-// }
+    modal.style.transform = 'translate3d(0px, '+scrollValue+'px, 0px)';
+}
+
+thumbnail1.addEventListener('click', openModal);
+
+function openModal() {
+    modal.style.display = 'flex';
+
+}
+
+close.addEventListener('click', closeModal)
+
+function closeModal() {
+    modal.style.display = 'none'
+}

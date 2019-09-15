@@ -14,14 +14,14 @@
   <body>
     <header class="header" id="header">
       <div id="fix">
-      <div class="container" id="container">
-        <div class="avatar"></div>
-        <h1>Welcome to my Portfolio!</h1>
-        <p>Feel free to look around</p>
+        <div class="container" id="container">
+          <div class="avatar"></div>
+          <h1>Welcome to my Portfolio!</h1>
+          <p>Feel free to look around</p>
+        </div>
       </div>
-    </div>
     </header>
-    <div class="main" id="main">
+    <article class="main" id="main">
       <section class="about-me">
         <h2>About me</h2>
         <p>
@@ -34,39 +34,51 @@
       </section>
       <hr />
       <section class="my-projects">
-          <h2>My projects</h2>
-        <div class="my-projects__container">
-          <div class='project-1'>
-            <div class='thumbnail'></div>
-        <h3>TODO app</h3>
-        <p>
-          I have created Todo application using React and Redux with login feature, Firebase backend and authentication.
-          Logged in user is able to: create/edit todos, mark tasks as completed and remove completed tasks from the list.
-        </p>
-      </div>
-      <div class='project-2'>
-          <div class='thumbnail'></div>
-        <h3>Cat4you website and mini game</h3>
-        <p>
-          This website was part of the front-end course I took at infoShare Academy.
-          During which I worked in a team of 4 people and this is the first part of the project.
-          There is a hidden game which starts when user provides a valid email address.
-        </p>
-      </div>
-      <div class='project-3'>
-          <div class='thumbnail'></div>
-        <h3>Cat4you app</h3>
-        <p>
-          Second part of the project. Our application, in which user can find a cat breed based on his expectations.
-          Breeder address, recommended food and toys.
-        </p>
-      </div>
-      <div class='project-4'>
-          <div class='thumbnail'></div>
-        <h3>My porfolio website</h3>
-        <p>Created with CSS Grid and flexbox bla bla bla</p>
-      </div>
-      </div>
+        <h2>My projects</h2>
+        <article class="my-projects__container">
+          <article class="project-1">
+            <div class="thumbnail" id="thumbnail-1">
+              <a class="thumbnail-btn">View</a>
+            </div>
+            <h3>TODO app</h3>
+            <p>
+              I have created Todo application using React and Redux with login
+              feature, Firebase backend and authentication. Logged in user is
+              able to: create/edit todos, mark tasks as completed and remove
+              completed tasks from the list.
+            </p>
+          </article>
+          <article class="project-2">
+            <div class="thumbnail">
+              <a class="thumbnail-btn">View</a>
+            </div>
+            <h3>Cat4you website and mini game</h3>
+            <p>
+              This website was part of the front-end course I took at infoShare
+              Academy. During which I worked in a team of 4 people and this is
+              the first part of the project. There is a hidden game which starts
+              when user provides a valid email address.
+            </p>
+          </article>
+          <article class="project-3">
+            <div class="thumbnail">
+              <a class="thumbnail-btn">View</a>
+            </div>
+            <h3>Cat4you app</h3>
+            <p>
+              Second part of the project. Our application, in which user can
+              find a cat breed based on his expectations. Breeder address,
+              recommended food and toys.
+            </p>
+          </article>
+          <article class="project-4">
+            <div class="thumbnail">
+              <a class="thumbnail-btn">View</a>
+            </div>
+            <h3>My porfolio website</h3>
+            <p>Created with CSS Grid and flexbox bla bla bla</p>
+          </article>
+        </article>
         <button class="button">Full portfolio</button>
       </section>
       <hr />
@@ -80,9 +92,14 @@
         </p>
         <div class="contact-me__container">
           <div class="contact-me__container-input">
-            <input class="name" type="text" placeholder="Name"/>
+            <input class="name" type="text" placeholder="Name" />
             <input class="email" type="email" placeholder="Email" />
-            <textarea class="message" name="Message" id="" placeholder="Message"></textarea>
+            <textarea
+              class="message"
+              name="Message"
+              id=""
+              placeholder="Message"
+            ></textarea>
             <button class="button" type="submit">Send Message</button>
           </div>
           <ul>
@@ -92,10 +109,11 @@
           </ul>
         </div>
       </section>
-    </div>
+    </article>
     <div class="modal-bg">
       <div class="modal-content">
-        <div class='modal-content__img'></div>
+        <div class="modal--close">+</div>
+        <div class="modal-content__img"></div>
       </div>
     </div>
     <footer class="footer" id="footer">
@@ -115,5 +133,5 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
