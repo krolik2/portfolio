@@ -3,13 +3,14 @@ const header = document.querySelector("#header");
 const main = document.querySelector("#main");
 const fix = document.querySelector("#fix");
 const modal = document.querySelector(".modal-bg");
-// const thumbnail = document.querySelector('.thumbnail');
+const thumbnail = document.querySelector(".thumbnail");
 const close = document.querySelector(".modal--close");
 const thumbnails = document.querySelectorAll(".thumbnail");
 const modalImage = document.querySelector(".modal-content__img");
+const modalText = document.querySelector(".modal-text");
+const modalHeader = document.querySelector(".modal-header");
+const modalContent = document.querySelector(".modal-content");
 let projects = {};
-
-console.log(thumbnails);
 
 // footer placement
 window.addEventListener("resize", getWidth);
@@ -38,10 +39,9 @@ function moveBackground() {
   modal.style.transform = "translate3d(0px, " + scrollValue + "px, 0px)";
 }
 
-//modal auto imageloader
 function getProjectNumber() {
   let projectName = event.target.parentElement.className;
-  let projectNumber = Number(projectName.charAt(projectName.length - 1));
+  let projectNumber = projectName.charAt(projectName.length - 1);
   projects.currentNumber = projectNumber;
 }
 
@@ -49,6 +49,7 @@ thumbnails.forEach(element =>
   element.addEventListener("click", () => {
     getProjectNumber();
     assignToModal();
+    copyText();
     openModal();
   })
 );
@@ -72,4 +73,11 @@ function closeModal() {
 
 function removeClass() {
   modalImage.classList.remove(`thumbnail--image-${projects.currentNumber}`);
+}
+
+function copyText() {
+  let title = document.querySelector(`.project-${projects.currentNumber} h3`).innerText;
+  let description = document.querySelector(`.project-${projects.currentNumber} p`).innerText;
+  modalHeader.innerText = title;
+  modalText.innerText = description;
 }
