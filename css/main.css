@@ -8,6 +8,18 @@ html {
 
 a {
   text-decoration: none;
+  transition: 0.2s ease-in-out;
+  color: black;
+  border-bottom: 6px solid orange;
+  
+}
+
+a:hover {
+
+  transition: 0.2s ease-in-out;
+  color: orange;
+  border-bottom: none;
+
 }
 
 h2 {
@@ -240,6 +252,14 @@ input {
 
 .footer a {
   color: #fff;
+  border-bottom: none;
+  transition: 0.2s ease-in-out;
+}
+
+.footer a:hover {
+  color: orange;
+  transition: 0.2s ease-in-out;
+  
 }
 
 .modal-bg {
