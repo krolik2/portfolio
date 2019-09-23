@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.1/css/all.css"
     />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header" id="header">
@@ -21,7 +22,7 @@
         </div>
       </div>
     </header>
-    <article class="main" id="main">
+    <main class="main" id="main">
       <section class="about-me">
         <h2>About me</h2>
         <p>
@@ -91,17 +92,21 @@
           voluptate?
         </p>
         <div class="contact-me__container">
-          <div class="contact-me__container-input">
-            <input class="name" type="text" placeholder="Name" />
-            <input class="email" type="email" placeholder="Email" />
+          <form id="form" class="contact-me__container-input">
+            <input id="name" class="name" type="text" placeholder="Name" required />
+            <input id="email" class="email" type="email" placeholder="Email" required />
             <textarea
               class="message"
               name="Message"
-              id=""
+              id="message"
               placeholder="Message"
+              required
             ></textarea>
+            <span class="error-msg name-err"></span>
+            <span class="error-msg msg-err"></span>
+            <span  class="error-msg email-err"></span>
             <button class="button" type="submit">Send Message</button>
-          </div>
+          </form>
           <ul>
             <li>Śląska 33A/9<br />80-379 Gdańsk</li>
             <li>884-854-347</li>
@@ -109,7 +114,7 @@
           </ul>
         </div>
       </section>
-    </article>
+    </main>
     <div class="modal-bg">
       <div class="modal-content">
         <div class="modal--close">+</div>

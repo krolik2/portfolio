@@ -2,7 +2,7 @@ body,
 html {
   height: 100%;
   margin: 0;
-  font-family: "Montserrat";
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }
 
@@ -17,6 +17,10 @@ a:hover {
   transition: 0.2s ease-in-out;
   color: orange;
   border-bottom: none;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
 }
 
 h2 {
@@ -171,6 +175,7 @@ hr {
 .contact-me__container-input {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 input {
@@ -182,7 +187,9 @@ input {
   border: none;
   border-radius: 4px;
   font-size: 16px;
+  outline: none;
 }
+
 
 .email {
   margin: 1em 0;
@@ -199,6 +206,7 @@ input {
   font-size: 16px;
   margin-bottom: 4vh;
   font-family: inherit;
+  outline: none;
 }
 
 .contact-me ul > ::before {
@@ -320,6 +328,25 @@ input {
   padding: 1em 1em;
   text-align: justify;
   margin-bottom: 0;
+}
+
+.error {
+  border: 2px red solid;
+}
+
+.name-err {
+  top: 13%;
+  left: 0;
+}
+.msg-err {
+  bottom: 19%;
+  left: 0;
+}
+
+.error-msg {
+ font-size: 0.6em;
+ color: red;
+ position: absolute;
 }
 
 @media (min-width: 700px) {
