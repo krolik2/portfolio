@@ -162,11 +162,38 @@ form.addEventListener("submit", e => {
 	msg: ${message.value}
 	`);
 		console.log(errors);
+		firebasePush(name, email, message);
 	} else {
 		console.log(errors);
 		console.error("ABORT THE MISSION!!!!!");
 	}
 });
+
+//Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyCrGwnqYEHOVqzo-yz2MPc17DbzVZa6ZoM",
+    authDomain: "message-logger-3ddf5.firebaseapp.com",
+    databaseURL: "https://message-logger-3ddf5.firebaseio.com",
+    projectId: "message-logger-3ddf5",
+    storageBucket: "",
+    messagingSenderId: "64933848454",
+    appId: "1:64933848454:web:997161210424911336f807"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+function firebasePush(name, email, message) {
+
+	var ref = firebase.database().ref('messages').push().set(
+		{
+			name: name.value,
+			mail: email.value,
+			message: message.value
+		}
+	);
+}
+
 
 //TODO add download link to cv
 //TODO add separate link to code/live ver.
