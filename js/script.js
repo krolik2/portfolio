@@ -14,6 +14,8 @@ const message = document.querySelector("#message");
 const form = document.querySelector("#form");
 const nameErrMsg = document.querySelector(".name-err");
 const messageErrMsg = document.querySelector(".msg-err");
+let timeStamp = new Date().toDateString();
+const notification = document.querySelector('.notification');
 
 // footer placement
 window.addEventListener("resize", getWidth);
@@ -98,8 +100,8 @@ let errors = {
 name.addEventListener("keyup", () => {
 	if (
 		name.value.length < 0 ||
-    name.value.length > 30 ||
-    name.value.length < 3
+    	name.value.length > 30 ||
+    	name.value.length < 3
 	) {
 		errors.name = "name must be between 3 and 30 characters long";
 		name.classList.add("error");
@@ -114,8 +116,8 @@ name.addEventListener("keyup", () => {
 message.addEventListener("keyup", () => {
 	if (
 		message.value.length < 0 ||
-    message.value.length > 1000 ||
-    message.value.length < 3
+    	message.value.length > 1000 ||
+    	message.value.length < 3
 	) {
 		errors.message = "message must be between 3 and 1000 characters long";
 		message.classList.add("error");
@@ -151,21 +153,29 @@ function formValid(x) {
 	return valid;
 }
 
+function displayNotification() {
+	notification.style.display = 'flex'
+	setTimeout(hideNotification, 2000);
+}
+
+function hideNotification() {
+	notification.style.display = 'none'
+}
+
+function resetForm() {
+	name.value = '';
+	email.value = '';
+	message.value = '';	
+
+}
+
 form.addEventListener("submit", e => {
 	e.preventDefault();
 
 	if (formValid(errors)) {
-		console.log(`
-	--SUBMITING--
-	name: ${name.value}
-	email: ${email.value}
-	msg: ${message.value}
-	`);
-		console.log(errors);
-		firebasePush(name, email, message);
-	} else {
-		console.log(errors);
-		console.error("ABORT THE MISSION!!!!!");
+		firebasePush();
+		displayNotification();
+		resetForm();	
 	}
 });
 
@@ -183,13 +193,14 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
 
-function firebasePush(name, email, message) {
+function firebasePush() {
 
 	var ref = firebase.database().ref('messages').push().set(
 		{
 			name: name.value,
 			mail: email.value,
-			message: message.value
+			message: message.value,
+			date: timeStamp
 		}
 	);
 }
