@@ -195,7 +195,7 @@ var firebaseConfig = {
 
 function firebasePush() {
 
-	var ref = firebase.database().ref('messages').push().set(
+	firebase.database().ref('messages').push().set(
 		{
 			name: name.value,
 			mail: email.value,
