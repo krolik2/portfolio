@@ -26,7 +26,7 @@ function getWidth() {
 }
 
 function moveFooter(screenWidth) {
-	if (screenWidth > 700) {
+	if (screenWidth >= 1024) {
 		fix.appendChild(footer);
 	} else {
 		main.insertAdjacentElement("afterend", footer);
