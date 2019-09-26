@@ -206,5 +206,4 @@ function firebasePush() {
 }
 
 
-//TODO add download link to cv
 //TODO add separate link to code/live ver.
