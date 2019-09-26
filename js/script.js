@@ -207,3 +207,5 @@ function firebasePush() {
 
 
 //TODO add separate link to code/live ver.
+//TODO buttons functionalites
+//TODO content and img update
