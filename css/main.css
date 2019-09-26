@@ -44,7 +44,7 @@ hr {
 }
 
 .header {
-  background: url("https://placekitten.com/1920/1080") no-repeat;
+  background: url("https://www.placecage.com/1920/1080") no-repeat;
   background-size: cover;
   min-height: 70vh;
   color: #fff;
@@ -59,7 +59,7 @@ hr {
 }
 
 .avatar {
-  background: url("https://placekitten.com/120/120") no-repeat;
+  background: url("https://www.placecage.com/120/120") no-repeat;
   background-size: cover;
   /* background-position-y: -15px; */
   width: 120px;
@@ -108,11 +108,11 @@ hr {
 }
 
 .thumbnail--image-1 {
-  background-image: url("https://placekitten.com/700/450");
+  background-image: url("https://www.placecage.com/700/450");
 }
 
 .thumbnail--image-2 {
-  background-image: url("https://placekitten.com/700/450");
+  background-image: url("https://www.placecage.com/700/450");
 }
 
 .thumbnail--image-3 {
@@ -234,7 +234,7 @@ input {
 }
 
 .footer {
-  background: url("https://placekitten.com/1920/1080") no-repeat;
+  background: url("https://www.placecage.com/1920/1080") no-repeat;
   background-size: cover;
   background-position-y: center;
   min-height: 25vh;
