@@ -30,10 +30,8 @@
       <section class="about-me">
         <h2>About me</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
-          fugit asperiores vel natus porro odio sapiente perspiciatis, vitae
-          dolores ab at ullam totam quos officiis quidem impedit provident ut
-          maxime!
+          Hi! I'm Mateusz Królikowski, 29 years old living in Gdańsk. I aspire
+          to become a professional front-end developer.
         </p>
         <button class="button">Read more</button>
       </section>
@@ -45,11 +43,17 @@
             <div class="thumbnail thumbnail--image-1">
               <span class="thumbnail-btn">View</span>
             </div>
-            <h3><a href="#">TODO app</a></h3>
+            <h3>
+              TODO app
+            </h3>
+            <div class="link-container">
+              <a href="#"><button class="button-link">view code</button></a>
+              <a href="#"><button class="button-link">view live</button></a>
+            </div>
             <p>
-              I have created Todo application using React and Redux with login
-              feature, Firebase backend and authentication. Logged in user is
-              able to: create/edit todos, mark tasks as completed and remove
+              I'm working on Todo application using React and Redux with login
+              feature, Firebase backend and authentication. Logged in user will
+              be able to: create/edit todos, mark tasks as completed and remove
               completed tasks from the list.
             </p>
           </article>
@@ -58,10 +62,12 @@
               <span class="thumbnail-btn">View</span>
             </div>
             <h3>
-              <a href="https://github.com/infoshareacademy/jfdz10-nan"
-                >Cat4you website and mini game</a
-              >
+              Cat4you website and mini game
             </h3>
+            <div class="link-container">
+              <a href="https://github.com/infoshareacademy/jfdz10-nan"><button class="button-link">view code</button></a>
+              <a href="http://www.nan.jfdz10.is-academy.pl/"><button class="button-link">view live</button></a>
+            </div>
             <p>
               This website was a part of the front-end course I took at
               infoShare Academy. During which I worked in a team of 4 people and
@@ -74,14 +80,16 @@
               <span class="thumbnail-btn">View</span>
             </div>
             <h3>
-              <a href="https://github.com/infoshareacademy/jfdz10-nan-app"
-                >Cat4you app</a
-              >
+              Cat4you app
             </h3>
+            <div class="link-container">
+              <a href="https://github.com/infoshareacademy/jfdz10-nan-app"><button class="button-link">view code</button></a>
+              <a href="http://app.nan.jfdz10.is-academy.pl/"><button class="button-link">view live</button></a>
+            </div>
             <p>
-              Second part of the project. Our application, in which user can
-              find a cat breed based on his expectations. Breeder address,
-              recommended food and toys.
+              Second part of the project. Fully fledged React app with firebase
+              backend, in which user can find a cat breed based on his
+              expectations. Breeder address, recommended food and toys.
             </p>
           </article>
           <article class="project-4">
@@ -89,23 +97,29 @@
               <span class="thumbnail-btn">View</span>
             </div>
             <h3>
-              <a href="https://github.com/krolik2/portfolio"
-                >My porfolio website</a
-              >
+              My portfolio website
             </h3>
-            <p>Created with CSS Grid and flexbox bla bla bla</p>
+            <div class="link-container">
+              <a href="https://github.com/krolik2/portfolio"><button class="button-link">view code</button></a>
+              <a href="https://krolik2.github.io/portfolio/"><button class="button-link">view live</button></a>
+            </div>
+            <p>
+              I have written from scratches fully functional and responsive
+              portfolio website using technologies such as: CSS Grid, flexbox
+              and a bit of JavaScript magic. Design inspiration was based on
+              html5up "Strata". Contact form uses firebase database for
+              gathering users inputs which are then mailed to me by the
+              Nodemailer.
+            </p>
           </article>
         </article>
-        <button class="button">Full portfolio</button>
       </section>
       <hr />
       <section class="contact-me">
         <h2>Contact me</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam,
-          similique. Cupiditate quod nam doloribus dolorem quasi natus, tenetur
-          suscipit facilis cum laborum. Cum at nemo, quia suscipit eos est
-          voluptate?
+          If you would like to get in touch with me, please use the form below
+          or contact me directly.
         </p>
         <div class="contact-me__container">
           <form id="form" class="contact-me__container-input">
@@ -148,6 +162,7 @@
         <div class="modal--close">+</div>
         <div class="modal-content__img"></div>
         <h3 class="modal-header"></h3>
+        <div class="modal-links"></div>
         <p class="modal-text"></p>
       </div>
     </div>
@@ -163,21 +178,22 @@
             ></a>
           </li>
           <li>
-            <a class="footer__link"
+            <a
+              class="footer__link"
               href="https://github.com/krolik2"
               title="github page"
               ><i class="fab fa-github"></i
             ></a>
           </li>
           <li>
-              <a
-                class="footer__link"
-                href="https://drive.google.com/open?id=1rhmvmSRwcjGAajfCFR9YDN6Wh2y0mARn"
-                title="download resume"
-              >
+            <a
+              class="footer__link"
+              href="https://drive.google.com/open?id=1rhmvmSRwcjGAajfCFR9YDN6Wh2y0mARn"
+              title="download resume"
+            >
               <i class="fas fa-file-download"></i>
-              </a>
-            </li>
+            </a>
+          </li>
         </ul>
       </div>
     </footer>

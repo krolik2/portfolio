@@ -7,6 +7,7 @@ const thumbnails = document.querySelectorAll(".thumbnail");
 const modalImage = document.querySelector(".modal-content__img");
 const modalText = document.querySelector(".modal-text");
 const modalHeader = document.querySelector(".modal-header");
+const modalLinks = document.querySelector(".modal-links");
 let projects = {};
 let name = document.querySelector("#name");
 const email = document.querySelector("#email");
@@ -35,14 +36,6 @@ function moveFooter(screenWidth) {
 
 moveFooter(window.innerWidth);
 
-// modal scroll
-window.addEventListener("scroll", moveBackground);
-
-function moveBackground() {
-	let scrollValue = window.pageYOffset;
-
-	modal.style.transform = "translate3d(0px, " + scrollValue + "px, 0px)";
-}
 // modal copy elements from article
 function getProjectNumber() {
 	let projectName = event.target.parentElement.className;
@@ -66,10 +59,14 @@ function assignImgToModal() {
 function copyText() {
 	let title = document.querySelector(`.project-${projects.currentNumber} h3`)
 		.innerHTML;
+	
+	let links = document.querySelector(`.project-${projects.currentNumber} .link-container`).innerHTML;
+	
 	let description = document.querySelector(
 		`.project-${projects.currentNumber} p`
 	).innerText;
 	modalHeader.innerHTML = title;
+	modalLinks.innerHTML = links;
 	modalText.innerText = description;
 }
 
@@ -206,6 +203,5 @@ function firebasePush() {
 }
 
 
-//TODO add separate link to code/live ver.
 //TODO buttons functionalites
-//TODO content and img update
+//TODO write about myself + photo
