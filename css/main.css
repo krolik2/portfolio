@@ -5,7 +5,7 @@ html {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   color: #363635;
-  background: #FFFFFA;
+  background: #fffffa;
 }
 
 a {
@@ -16,7 +16,7 @@ a {
 
 a:hover {
   transition: 0.2s ease-in-out;
-  color: #EDCB96;
+  color: #edcb96;
   border-bottom: none;
 }
 
@@ -40,7 +40,7 @@ hr {
   margin: 6vh 0;
   display: block;
   border: 0;
-  border-top: 2px solid #DAD6D6;
+  border-top: 2px solid #dad6d6;
   padding: 0;
 }
 
@@ -48,7 +48,7 @@ hr {
   background: url("../images/photo-1534283457141-00c18acca0b2.jpg") no-repeat;
   background-size: cover;
   min-height: 55vh;
-  color: #FFFFFA;
+  color: #fffffa;
   padding: 4vh 4vh;
 }
 
@@ -83,6 +83,7 @@ hr {
 .thumbnail {
   background: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100%;
   height: 200px;
   border-radius: 0.35em;
@@ -95,8 +96,8 @@ hr {
 
 .thumbnail-btn {
   font-size: 16px;
-  border: solid #FFFFFA 2px;
-  color: #FFFFFA;
+  border: solid #fffffa 2px;
+  color: #fffffa;
   padding: 10px;
   height: 20px;
   width: 50px;
@@ -145,17 +146,17 @@ hr {
 }
 
 .button:hover {
-  color: #EDCB96;
-  border: solid #EDCB96 2px;
+  color: #edcb96;
+  border: solid #edcb96 2px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
 
 .button {
   width: 100%;
-  background: #FFFFFA;
+  background: #fffffa;
   font-size: 18px;
-  border: solid #DAD6D6 2px;
+  border: solid #dad6d6 2px;
   color: #363635;
   padding: 10px;
   border-radius: 4px;
@@ -185,7 +186,7 @@ hr {
 
 input {
   display: block;
-  background: #DAD6D6;
+  background: #dad6d6;
   height: 30px;
   width: 100%;
   padding: 5px;
@@ -193,6 +194,11 @@ input {
   border-radius: 4px;
   font-size: 16px;
   outline: none;
+  border: 2px solid transparent;
+}
+
+input:focus {
+  border: 2px solid #edcb96;
 }
 
 .email {
@@ -201,7 +207,7 @@ input {
 
 .message {
   display: block;
-  background: #DAD6D6;
+  background: #dad6d6;
   height: 90px;
   width: 100%;
   padding: 5px;
@@ -211,6 +217,11 @@ input {
   margin-bottom: 4vh;
   font-family: inherit;
   outline: none;
+  border: 2px solid transparent;
+}
+
+.message:focus {
+  border: 2px solid #edcb96;
 }
 
 .contact-me ul > ::before {
@@ -261,13 +272,13 @@ input {
 }
 
 .footer__link {
-  color: #FFFFFA;
+  color: #fffffa;
   border-bottom: none;
   transition: 0.2s ease-in-out;
 }
 
 .footer__link:hover {
-  color: #EDCB96;
+  color: #edcb96;
   transition: 0.2s ease-in-out;
 }
 
@@ -283,9 +294,9 @@ input {
 }
 
 .modal-content {
-  width: 350px;
-  height: 400px;
-  background: #FFFFFA;
+  width: 310px;
+  height: auto;
+  background: #fffffa;
   border-radius: 0.35em;
   position: relative;
   display: flex;
@@ -319,6 +330,8 @@ input {
 
 .modal-content__img {
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 250px;
   border-radius: 0.35em 0.35em 0 0;
@@ -330,12 +343,11 @@ input {
 }
 
 .modal-links {
-  width: 50%;
   align-self: center;
   display: flex;
   justify-content: space-evenly;
   padding: 10px 10px 0;
-  
+  margin: 0 auto;
 }
 
 .modal-text {
@@ -375,7 +387,7 @@ input {
   background: rgb(38, 206, 38);
   font-size: 1.2em;
   font-weight: 600;
-  color: #FFFFFA;
+  color: #fffffa;
   z-index: 10;
   animation: pop 2s forwards 0s ease-out;
   display: none;
@@ -388,9 +400,9 @@ input {
 .button-link {
   width: 100px;
   height: 40px;
-  background: #FFFFFA;
+  background: #fffffa;
   font-size: 15px;
-  border: solid #DAD6D6 2px;
+  border: solid #dad6d6 2px;
   color: #363635;
   padding: 10px;
   border-radius: 4px;
@@ -399,8 +411,8 @@ input {
 }
 
 .button-link:hover {
-  color: #EDCB96;
-  border: solid #EDCB96 2px;
+  color: #edcb96;
+  border: solid #edcb96 2px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
@@ -457,13 +469,16 @@ input {
     padding-right: 4vw;
   }
 
+  .modal-links {
+    width: 50%;
+  }
+
   .modal-content {
-    width: 700px;
-    height: 500px;
+    width: 600px;
   }
 
   .modal-content__img {
-    height: 80%;
+    height: 300px;
   }
 }
 
@@ -493,6 +508,14 @@ input {
     padding: 12vh 6vw 12vh 4vw;
   }
 
+  .modal-content {
+    width: 800px;
+  }
+
+  .modal-content__img {
+    height: 400px;
+  }
+
   .footer {
     background: none;
     min-height: 14vh;
@@ -509,5 +532,72 @@ input {
 
   .footer__container i {
     margin-left: 2vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .thumbnail {
+    height: 300px;
+  }
+
+  h1,
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+
+  .button {
+    font-size: 1.5em;
+    height: 60px;
+    border: solid #dad6d6 3px;
+  }
+
+  .button:hover {
+    border: solid #edcb96 3px;
+  }
+
+  input {
+    height: 40px;
+    font-size: 1.3em;
+  }
+
+  .message {
+    font-size: 1.3em;
+  }
+
+  .contact-me__container-input {
+    max-width: 600px;
+  }
+
+  .contact-me ul {
+    font-size: 1.3em;
+  }
+
+  .contact-me ul > ::before {
+    font-size: 1.3em;
+  }
+
+  .footer__link {
+    font-size: 1.3em;
+  }
+
+  .error-msg {
+    font-size: 1em;
+  }
+
+  .name-err {
+    top: 15%;
+  }
+
+  .msg-err {
+    bottom: 22%;
   }
 }
