@@ -74,6 +74,11 @@ function openModal() {
 	modal.style.display = "flex";
 }
 
+modal.addEventListener("click",() => {
+	closeModal();
+	removeClass();
+});
+
 close.addEventListener("click", () => {
 	closeModal();
 	removeClass();
@@ -204,4 +209,4 @@ function firebasePush() {
 
 
 //TODO buttons functionalites
-//TODO write about myself + photo
+//TODO write bio

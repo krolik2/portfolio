@@ -60,7 +60,7 @@ hr {
 }
 
 .avatar {
-  background: url("https://www.placecage.com/120/120") no-repeat;
+  background: url("../images/photo.jpg") no-repeat;
   background-size: cover;
   /* background-position-y: -15px; */
   width: 120px;
