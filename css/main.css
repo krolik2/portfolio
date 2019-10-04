@@ -31,6 +31,13 @@ h2 {
   margin-bottom: 6vh;
 }
 
+.bio {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 4vh;
@@ -47,7 +54,8 @@ hr {
 .header {
   background: url("../images/photo-1534283457141-00c18acca0b2.jpg") no-repeat;
   background-size: cover;
-  min-height: 55vh;
+  background-attachment: fixed;
+  height: 60%;
   color: #fffffa;
   padding: 4vh 4vh;
 }
@@ -62,7 +70,6 @@ hr {
 .avatar {
   background: url("../images/photo.jpg") no-repeat;
   background-size: cover;
-  /* background-position-y: -15px; */
   width: 120px;
   height: 120px;
   align-self: center;
@@ -365,7 +372,7 @@ input:focus {
   left: 0;
 }
 .msg-err {
-  bottom: 19%;
+  bottom: 18%;
   left: 0;
 }
 
@@ -488,6 +495,10 @@ input:focus {
     grid-template-columns: 1fr 2fr;
   }
 
+  .header {
+    height: 100%
+  }
+
   .avatar {
     align-self: auto;
   }
@@ -554,6 +565,15 @@ input:focus {
     line-height: 1.5em;
   }
 
+ .bio {
+    font-size: 1.3em;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
   .button {
     font-size: 1.5em;
     height: 60px;
@@ -598,6 +618,6 @@ input:focus {
   }
 
   .msg-err {
-    bottom: 22%;
+    bottom: 20%;
   }
 }
