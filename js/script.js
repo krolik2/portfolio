@@ -26,9 +26,9 @@ toggleButton.addEventListener("click", () => {
 });
 
 function toggleBio() {
-  bio.style.display === "none"
-    ? (bio.style.display = "flex")
-    : (bio.style.display = "none");
+  bio.style.display === "flex"
+    ? (bio.style.display = "none")
+    : (bio.style.display = "flex");
 }
 
 function toggleBtnName() {
