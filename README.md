@@ -1,2 +1,2 @@
 
-my portfolio website - https://github.com/krolik2/portfolio
+my portfolio website - https://krolik2.github.io/portfolio/
