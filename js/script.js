@@ -1,6 +1,6 @@
 const footer = document.querySelector("#footer");
 const main = document.querySelector("#main");
-const fix = document.querySelector("#fix");
+const header = document.querySelector(".header__container-outer");
 const modal = document.querySelector(".modal-bg");
 const close = document.querySelector(".modal--close");
 const thumbnails = document.querySelectorAll(".thumbnail");
@@ -46,7 +46,7 @@ function getWidth() {
 
 function moveFooter(screenWidth) {
   if (screenWidth >= 1024) {
-    fix.appendChild(footer);
+    header.appendChild(footer);
   } else {
     main.insertAdjacentElement("afterend", footer);
   }

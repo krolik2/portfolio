@@ -14,11 +14,14 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header" id="header">
-      <div id="fix">
+      <div class="header__container-outer">
         <div class="container" id="container">
           <div class="avatar"></div>
           <h1>Welcome to my Portfolio!</h1>
@@ -31,17 +34,18 @@
       <section class="about-me">
         <h2>About me</h2>
         <p>
-          Hi! I'm Mateusz Królikowski, 29 year old living in Gdańsk. I aspire
-          to become a professional front-end developer.
+          Hi! I'm Mateusz Królikowski, 29 year old living in Gdańsk. I aspire to
+          become a professional front-end developer.
         </p>
         <blockquote class="bio">
           <p>
-            Mateusz Królikowski is a novice but ambitious developer.
-            He finished "junior front-end developer" course at InfoShare Academy in May 2019 
-            and is now looking for a job opportunity.
-            In his free time Mateusz enjoys playing games and chilling out with his cat companion called Julek.
-            He is currently working continuously on expanding his portfolio.
-            You can reach him out using contact details or the contact-form at the bottom of this page.
+            Mateusz Królikowski is a novice but ambitious developer. He finished
+            "junior front-end developer" course at InfoShare Academy in May 2019
+            and is now looking for a job opportunity. In his free time Mateusz
+            enjoys playing games and chilling out with his cat companion called
+            Julek. He is currently working continuously on expanding his
+            portfolio. You can reach him out using contact details or the
+            contact-form at the bottom of this page.
           </p>
         </blockquote>
         <button class="button" id="toggle">Read more</button>
@@ -49,7 +53,7 @@
       <hr />
       <section class="my-projects">
         <h2>My projects</h2>
-        <article class="my-projects__container">
+        <div class="my-projects__container">
           <article class="project-1">
             <div class="thumbnail thumbnail--image-1">
               <span class="thumbnail-btn">View</span>
@@ -58,7 +62,9 @@
               TODO app
             </h3>
             <div class="link-container">
-              <a href="#"><button class="button-link">view code</button></a>
+              <a href="https://github.com/krolik2/react-todo-app"
+                ><button class="button-link">view code</button></a
+              >
               <a href="#"><button class="button-link">view live</button></a>
             </div>
             <p>
@@ -68,16 +74,41 @@
               completed tasks from the list.
             </p>
           </article>
+          <article class="project-4">
+            <div class="thumbnail thumbnail--image-4">
+              <span class="thumbnail-btn">View</span>
+            </div>
+            <h3>
+              My portfolio website
+            </h3>
+            <div class="link-container">
+              <a href="https://github.com/krolik2/portfolio"
+                ><button class="button-link">view code</button></a
+              >
+              <a href="#"><button class="button-link">view live</button></a>
+            </div>
+            <p>
+              I have written fully functional and responsive portfolio website
+              using technologies such as: CSS Grid, flexbox and a bit of
+              JavaScript. Design inspiration was based on html5up "Strata". User
+              inputs are sent to firebase database and then mailed to me by the
+              Nodemailer.
+            </p>
+          </article>
           <article class="project-2">
             <div class="thumbnail thumbnail--image-2">
               <span class="thumbnail-btn">View</span>
             </div>
             <h3>
-              Cat4you website and mini game
+              Cat4you website and game
             </h3>
             <div class="link-container">
-              <a href="https://github.com/infoshareacademy/jfdz10-nan"><button class="button-link">view code</button></a>
-              <a href="http://www.nan.jfdz10.is-academy.pl/"><button class="button-link">view live</button></a>
+              <a href="https://github.com/infoshareacademy/jfdz10-nan"
+                ><button class="button-link">view code</button></a
+              >
+              <a href="http://www.nan.jfdz10.is-academy.pl/"
+                ><button class="button-link">view live</button></a
+              >
             </div>
             <p>
               This website was a part of the front-end course I took at
@@ -94,8 +125,12 @@
               Cat4you app
             </h3>
             <div class="link-container">
-              <a href="https://github.com/infoshareacademy/jfdz10-nan-app"><button class="button-link">view code</button></a>
-              <a href="http://app.nan.jfdz10.is-academy.pl/"><button class="button-link">view live</button></a>
+              <a href="https://github.com/infoshareacademy/jfdz10-nan-app"
+                ><button class="button-link">view code</button></a
+              >
+              <a href="http://app.nan.jfdz10.is-academy.pl/"
+                ><button class="button-link">view live</button></a
+              >
             </div>
             <p>
               Second part of the project. Fully fledged React app with firebase
@@ -103,26 +138,7 @@
               expectations. Breeder address, recommended food and toys.
             </p>
           </article>
-          <article class="project-4">
-            <div class="thumbnail thumbnail--image-4">
-              <span class="thumbnail-btn">View</span>
-            </div>
-            <h3>
-              My portfolio website
-            </h3>
-            <div class="link-container">
-              <a href="https://github.com/krolik2/portfolio"><button class="button-link">view code</button></a>
-              <a href="https://krolik2.github.io/portfolio/"><button class="button-link">view live</button></a>
-            </div>
-            <p>
-              I have written fully functional and responsive
-              portfolio website using technologies such as: CSS Grid, flexbox
-              and a bit of JavaScript. Design inspiration was based on
-              html5up "Strata". User inputs are sent to firebase database
-              and then mailed to me by the Nodemailer.
-            </p>
-          </article>
-        </article>
+        </div>
       </section>
       <hr />
       <section class="contact-me">

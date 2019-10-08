@@ -123,14 +123,16 @@ hr {
 
 .thumbnail--image-2 {
   background-image: url("../images/c4u.png");
+  background-position-x: left;
 }
 
 .thumbnail--image-3 {
   background-image: url("../images/c4u-app.png");
+  background-position-x: left;
 }
 
 .thumbnail--image-4 {
-  background-image: url("../images/default-bg.png");
+  background-image: url("../images/portfolio.png");
 }
 
 .thumbnail:hover .thumbnail-btn {
@@ -533,7 +535,7 @@ input:focus {
     min-height: 14vh;
   }
 
-  #fix {
+  .header__container-outer {
     position: sticky;
     top: 0;
   }
