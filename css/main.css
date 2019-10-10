@@ -28,15 +28,12 @@ h3 {
 
 h2 {
   margin-top: 0;
-  margin-bottom: 6vh;
+  margin-bottom: 5vh;
 }
 
-.bio {
-  font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.4;
-  display: none;
+h3 {
+  margin-top: 0;
+  margin-bottom: 1vh;
 }
 
 p {
@@ -50,6 +47,14 @@ hr {
   border: 0;
   border-top: 2px solid #dad6d6;
   padding: 0;
+}
+
+.bio {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.4;
+  display: none;
 }
 
 .header {
@@ -100,6 +105,7 @@ hr {
   justify-content: center;
   align-items: center;
   transition: ease-in-out 0.2s;
+  margin-bottom: 2vh;
 }
 
 .thumbnail-btn {
@@ -155,6 +161,10 @@ hr {
   transition: ease-in-out 0.2s;
 }
 
+.project-txt {
+  text-align: justify;
+}
+
 .button:hover {
   color: #edcb96;
   border: solid #edcb96 2px;
@@ -205,6 +215,7 @@ input {
   font-size: 16px;
   outline: none;
   border: 2px solid transparent;
+  font-family: inherit;
 }
 
 input:focus {
@@ -263,11 +274,10 @@ input:focus {
   min-height: 25vh;
   padding: 0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .footer__container {
-  margin-top: 4vh;
   width: 100%;
   height: 100%;
 }
@@ -275,10 +285,14 @@ input:focus {
 .footer__container ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   font-size: 30px;
   align-items: center;
   padding: 0;
+}
+
+.footer__container li {
+  margin: 0 10px;
 }
 
 .footer__link {
@@ -414,7 +428,7 @@ input:focus {
   font-size: 15px;
   border: solid #dad6d6 2px;
   color: #363635;
-  padding: 10px;
+  padding: 5px;
   border-radius: 4px;
   transition: ease-in-out 0.2s;
   outline: none;
@@ -538,6 +552,10 @@ input:focus {
   .header__container-outer {
     position: sticky;
     top: 0;
+  }
+
+  .footer__container {
+    margin-top: 4vh;
   }
 
   .footer__container ul {
