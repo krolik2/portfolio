@@ -1,2 +1,2 @@
 
-my portfolio website - work in progress
+my portfolio website - https://krolik2.github.io/portfolio/
