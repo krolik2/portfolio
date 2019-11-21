@@ -58,7 +58,7 @@ hr {
 }
 
 .header {
-  background: url("../images/photo-1534283457141-00c18acca0b2.jpg") no-repeat;
+  background: url("../images/bg.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 60%;
@@ -121,6 +121,10 @@ hr {
   text-align: center;
   z-index: 0;
   cursor: pointer;
+}
+
+.thumbnail--image-5 {
+  background-image: url("../images/weather.png");
 }
 
 .thumbnail--image-1 {
@@ -268,7 +272,7 @@ input:focus {
 }
 
 .footer {
-  background: url("../images/photo-1534283457141-00c18acca0b2.jpg") no-repeat;
+  background: url("../images/bg.jpg") no-repeat;
   background-size: cover;
   background-position-y: center;
   min-height: 25vh;
