@@ -89,8 +89,13 @@ hr {
   padding: 4vh 4vh;
 }
 .my-projects__container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: minmax(4, 1fr);
+  grid-template-columns: 1fr;
+}
+
+.project-hide {
+  display: none;
 }
 
 .thumbnail {
@@ -462,7 +467,6 @@ input:focus {
 
 @media (min-width: 768px) {
   .my-projects__container {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
   }

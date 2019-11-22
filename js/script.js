@@ -17,12 +17,48 @@ const nameErrMsg = document.querySelector(".name-err");
 const messageErrMsg = document.querySelector(".msg-err");
 let timeStamp = new Date().toDateString();
 const notification = document.querySelector(".notification");
-const toggleButton = document.querySelector("#toggle");
+const toggleBioButton = document.querySelector("#toggle-bio");
+const toggleProjectsBtn = document.querySelector("#toggle-projects");
 const bio = document.querySelector("blockquote");
+const projects = document.querySelectorAll("article");
+let projectsArr = Array.from(projects);
 
-toggleButton.addEventListener("click", () => {
+window.addEventListener("load", () => {
+  hideAllProjectsAfterFourth();
+});
+
+const hideAllProjectsAfterFourth = () => {
+  let projectsToHide = projectsArr.slice(4);
+  return projectsToHide.forEach(project =>
+    project.classList.add("project-hide")
+  );
+};
+
+toggleProjectsBtn.addEventListener("click", () => {
+  toggleProjects();
+  toggleProjectsBtnName();
+});
+
+const toggleProjects = () => {
+  const hidden = projectsArr.some(project =>
+    project.classList.contains("project-hide")
+  );
+  const unhide = projectsArr.forEach(project =>
+    project.classList.remove("project-hide")
+  );
+  hidden ? unhide : hideAllProjectsAfterFourth();
+};
+
+
+const toggleProjectsBtnName = () => {
+  toggleProjectsBtn.innerText === "View all"
+   ? (toggleProjectsBtn.innerText = "Close")
+   : (toggleProjectsBtn.innerText = "View all");
+};
+
+toggleBioButton.addEventListener("click", () => {
   toggleBio();
-  toggleBtnName();
+  toggleBioBtnName();
 });
 
 function toggleBio() {
@@ -31,10 +67,10 @@ function toggleBio() {
     : (bio.style.display = "flex");
 }
 
-function toggleBtnName() {
+function toggleBioBtnName() {
   bio.style.display === "none"
-    ? (toggleButton.innerText = "Read more")
-    : (toggleButton.innerText = "Read less");
+    ? (toggleBioButton.innerText = "Read more")
+    : (toggleBioButton.innerText = "Read less");
 }
 
 window.addEventListener("resize", getWidth);
