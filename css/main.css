@@ -122,6 +122,11 @@ hr {
   cursor: pointer;
 }
 
+.thumbnail--image-6 {
+  background-image: url("../images/scraper.png");
+  background-position-x: center;
+}
+
 .thumbnail--image-5 {
   background-image: url("../images/weather.png");
 }
