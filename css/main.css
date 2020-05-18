@@ -122,6 +122,11 @@ hr {
   cursor: pointer;
 }
 
+.thumbnail--image-7 {
+  background-image: url("../images/scanplan.gif");
+  background-size: contain !important;
+}
+
 .thumbnail--image-6 {
   background-image: url("../images/scraper.png");
   background-position-x: center;
